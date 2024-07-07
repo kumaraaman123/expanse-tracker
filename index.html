@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Expense Tracker</title>
+
+    <!-- FontAwesome CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <main class="mainContainer">
+      <div class="amountInputContainer">
+        <div class="amountContainer">
+          <div class="titleContainer">
+            <h1 class="title">Expense Tracker</h1>
+            <img
+              src="./assets/images/budget.png"
+              alt="budget"
+              class="budgetImg"
+            />
+          </div>
+          <div class="balanceBox">
+            <p class="balanceName">your balance</p>
+            <p class="balanceAmt" id="balanceAmt">₹ 0</p>
+          </div>
+          <div class="amountBox">
+            <div class="incomeBox">
+              <p class="incomeName">income</p>
+              <p id="incomeAmt" class="incomeAmt">₹ 0</p>
+            </div>
+            <div class="amountBorder"></div>
+            <div class="expenseBox">
+              <p class="expenseName">expense</p>
+              <p id="expenseAmt" class="expenseAmt">₹ 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="inputContainer">
+          <h2 class="formTitle">Add new transaction</h2>
+          <div class="formTitleBorder"></div>
+          <form class="addTransaction">
+            <div class="inputTitleBox">
+              <label for="inputTitle" class="inputName">Title</label>
+              <input
+                type="text"
+                id="inputTitle"
+                class="inputTitle"
+                placeholder="Enter title...."
+              />
+            </div>
+            <div class="inputAmountBox">
+              <label for="inputAmount" class="amountName">Amount</label>
+              <div>
+                <input
+                  type="number"
+                  id="inputAmount"
+                  class="inputAmount"
+                  placeholder="Enter amount...."
+                />
+                <select name="Amount Type" id="amountType" class="amountType">
+                  <option value="">-- Amount Type --</option>
+                  <option value="Income">Income</option>
+                  <option value="Expense">Expense</option>
+                </select>
+              </div>
+            </div>
+            <div class="btnAdd">
+              <button type="submit" id="btnTransaction" class="btnTransaction">
+                Add transaction
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="outputContainer">
+        <h2 class="outputTitle">history</h2>
+        <div class="outputTitleBorder"></div>
+        <div class="historyContainer">
+          <ul class="list" id="list"></ul>
+        </div>
+      </div>
+    </main>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
